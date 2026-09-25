@@ -140,6 +140,15 @@
       box-shadow: var(--shadow);
       overflow: hidden;
     }
+    .hero-visual.has-img::before { display: none; }
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
     .hero-visual::before {
       content: "";
       position: absolute;
@@ -367,15 +376,8 @@
         </div>
       </div>
 
-      <div class="hero-visual" aria-label="Data model connecting operational, financial, geospatial, and quality datasets to analytics">
-        <div class="diagram" aria-hidden="true">
-          <span class="connector c1"></span><span class="connector c2"></span><span class="connector c3"></span><span class="connector c4"></span>
-          <div class="node n1">Operational data</div>
-          <div class="node n2">Financial data</div>
-          <div class="node center">Semantic model</div>
-          <div class="node n3">GIS features</div>
-          <div class="node n4">Quality checks</div>
-        </div>
+      <div class="hero-visual has-img" aria-label="Abstract data network illustration">
+        <img class="hero-img" src="hero-visual.webp" alt="Abstract data network illustration">
         <div class="metric-bar">
           <div class="metric"><strong>71K+</strong><span>land & facility records optimized for analysis</span></div>
           <div class="metric"><strong>20h</strong><span>weekly manual reporting eliminated</span></div>
